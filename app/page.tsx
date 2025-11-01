@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <main
       id="main-content"
-      className="scroll-container min-h-[200vh] w-full overflow-hidden bg-white dark:bg-black"
+      className="scroll-container min-h-[150vh] md:min-h-[200vh] w-full overflow-hidden bg-white dark:bg-black"
     >
       <div
         className="container fixed inset-x-0 top-0 md:top-10 min-h-0 pl-4 md:pl-20 py-12 md:py-24 flex overflow-hidden z-0"
@@ -142,7 +142,7 @@ export default function Home() {
         aria-label="Hero section"
       >
         <div ref={typewriter}>
-          <h1 className="text-3xl sm:text-5xl md:text-[3.66em] font-semibold leading-[1.1] tracking-tight pb-6 text-[#1e1e1e] dark:text-[#e6e6e6] min-h-[90px] sm:min-h-[120px] md:min-h-[180px] text-center">
+          <h1 className="text-2xl sm:text-5xl md:text-[3.66em] font-semibold leading-[1.1] tracking-tight pb-6 text-[#1e1e1e] dark:text-[#e6e6e6] min-h-[90px] sm:min-h-[120px] md:min-h-[180px] text-center">
             <TypeAnimation
               sequence={[
                 "Discover, Buy, and Sell\nDigital Products",
