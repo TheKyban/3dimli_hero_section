@@ -107,13 +107,13 @@ export function IconButton({ icon, title }: { icon: React.ReactElement; title?: 
       type="button"
       aria-label={title}
       style={{ opacity: 1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-      className="relative flex items-center justify-center rounded-full border border-gray-300 bg-linear-to-r from-gray-100 to-gray-200 p-3.5 shadow-lg backdrop-blur-lg dark:border-white/10 dark:bg-white/10 dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.1),rgba(0,0,0))] dark:shadow-md cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="relative flex items-center justify-center rounded-full border border-gray-300 bg-linear-to-r from-gray-100 to-gray-200 p-2 sm:p-3 md:p-3.5 shadow-lg backdrop-blur-lg dark:border-white/10 dark:bg-white/10 dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.1),rgba(0,0,0))] dark:shadow-md cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       whileHover={ICON_HOVER.hover}
       whileTap={ICON_HOVER.tap}
       transition={ICON_HOVER.transition}
     >
       <motion.div
-        className="flex h-10 w-10 items-center justify-center"
+        className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center"
         whileHover={{ scale: 1.1 }}
         transition={ICON_HOVER.transition}
         aria-hidden="true"
@@ -150,8 +150,8 @@ export function TooltipContent({
       className={`${config.positionClass}`}
       style={{ position: "absolute", zIndex: 60 }}
     >
-      <div className="w-64 rounded-lg border border-dashed border-indigo-400 bg-white/95 text-card-foreground shadow-xl dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100">
-        <div className="flex flex-col space-y-1.5 p-6 pb-1 md:pb-2">
+      <div className="w-56 sm:w-60 md:w-64 rounded-lg border border-dashed border-indigo-400 bg-white/95 text-card-foreground shadow-xl dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100">
+        <div className="flex flex-col space-y-1.5 p-4 sm:p-5 md:p-6 pb-1 md:pb-2">
           <h3 className="flex items-center gap-2 text-xs font-medium tracking-tight md:text-sm">
             <span className="rounded-full bg-indigo-50 p-1 dark:bg-indigo-950" aria-hidden="true">
               {icon}
@@ -159,8 +159,8 @@ export function TooltipContent({
             {title}
           </h3>
         </div>
-        <div className="p-6 pt-0" suppressHydrationWarning>
-          <p className="text-xs leading-relaxed text-[#0000008a] dark:text-neutral-400">
+        <div className="p-4 sm:p-5 md:p-6 pt-0" suppressHydrationWarning>
+          <p className="text-[10px] sm:text-xs leading-relaxed text-[#0000008a] dark:text-neutral-400">
             {description}
           </p>
           {content}

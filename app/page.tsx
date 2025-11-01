@@ -124,13 +124,23 @@ export default function Home() {
   });
 
   return (
-    <main id="main-content" className="scroll-container min-h-[200vh] w-full overflow-hidden bg-white dark:bg-black">
-      <div className="container fixed inset-x-0 md:top-10 min-h-0 pl-20 py-24 flex overflow-hidden z-0" aria-hidden="true">
-        <span className="bg-[#ef233c] block blur-3xl filter h-72 lg:h-96 lg:w-96 mix-blend-multiply opacity-10 rounded-full w-72"></span>
-        <span className="-ml-20 bg-[#04868b] block blur-3xl filter h-72 lg:h-96 lg:w-96 mix-blend-multiply mt-40 nc-animation-delay-2000 opacity-10 rounded-full w-72"></span>
+    <main
+      id="main-content"
+      className="scroll-container min-h-[200vh] w-full overflow-hidden bg-white dark:bg-black"
+    >
+      <div
+        className="container fixed inset-x-0 top-0 md:top-10 min-h-0 pl-4 md:pl-20 py-12 md:py-24 flex overflow-hidden z-0"
+        aria-hidden="true"
+      >
+        <span className="bg-[#ef233c] block blur-3xl filter h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96 mix-blend-multiply opacity-10 rounded-full"></span>
+        <span className="-ml-10 md:-ml-20 bg-[#04868b] block blur-3xl filter h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96 mix-blend-multiply mt-20 md:mt-40 nc-animation-delay-2000 opacity-10 rounded-full"></span>
       </div>
 
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center text-center z-10" role="region" aria-label="Hero section">
+      <div
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4 flex flex-col items-center text-center z-10"
+        role="region"
+        aria-label="Hero section"
+      >
         <div ref={typewriter}>
           <h1 className="text-3xl sm:text-5xl md:text-[3.66em] font-semibold leading-[1.1] tracking-tight pb-6 text-[#1e1e1e] dark:text-[#e6e6e6] min-h-[90px] sm:min-h-[120px] md:min-h-[180px] text-center">
             <TypeAnimation
@@ -172,13 +182,17 @@ export default function Home() {
             Explore all products
           </a>
 
-          <nav aria-label="Platform features" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <nav
+            aria-label="Platform features"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            {/* Model */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[650px] -translate-y-[480px] z-50"
+              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[180px] -translate-y-[300px] sm:-translate-x-[280px] sm:-translate-y-[380px] md:-translate-x-[450px] md:-translate-y-[480px] lg:-translate-x-[650px] lg:-translate-y-[480px] z-50"
             >
               <AnimatedIconTooltip
-                icon={<Box className="h-6 w-6 text-indigo-600" />}
+                icon={<Box className="h-4 w-4 sm:h-6 sm:w-6 text-indigo-600" />}
                 tooltipIcon={<Box className="h-4 w-4 text-indigo-600" />}
                 tooltipTitle="3D Models"
                 tooltipDescription="Browse thousands of high-quality 3D models for your projects. Filter by category, style, format, and more."
@@ -201,10 +215,12 @@ export default function Home() {
             {/* Checkout */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 translate-x-[560px] -translate-y-[450px] hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 translate-x-40 -translate-y-[250px] sm:translate-x-[260px] sm:-translate-y-[270px] md:translate-x-[380px] md:-translate-y-[350px] lg:translate-x-[560px] lg:-translate-y-[450px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<ShoppingCart className="h-6 w-6 text-emerald-600" />}
+                icon={
+                  <ShoppingCart className="h-4 w-4 sm:h-6 sm:w-6 text-emerald-600" />
+                }
                 tooltipIcon={
                   <ShoppingCart className="h-4 w-4 text-emerald-600" />
                 }
@@ -217,10 +233,10 @@ export default function Home() {
             {/* Pricing */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[470px] -translate-y-[350px] hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2  -translate-x-[470px] -translate-y-[350px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Tag className="h-6 w-6 text-amber-600" />}
+                icon={<Tag className="h-4 w-4 sm:h-6 sm:w-6 text-amber-600" />}
                 tooltipIcon={<Tag className="h-4 w-4 text-amber-600" />}
                 tooltipTitle="Pricing"
                 tooltipDescription="Flexible pricing options for creators and businesses."
@@ -234,7 +250,9 @@ export default function Home() {
               className="item_bubble absolute left-1/2 top-1/2 translate-x-[410px] -translate-y-[250px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Search className="h-6 w-6 text-blue-600" />}
+                icon={
+                  <Search className="h-4 w-4 sm:h-6 sm:w-6 text-blue-600" />
+                }
                 tooltipIcon={<Search className="h-4 w-4 text-blue-600" />}
                 tooltipTitle="Search"
                 tooltipDescription="Find exactly what you need with our powerful search tools."
@@ -245,10 +263,12 @@ export default function Home() {
             {/* Community */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[690px] -translate-y-60 hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[690px] translate-y-60 hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Users className="h-6 w-6 text-purple-600" />}
+                icon={
+                  <Users className="h-4 w-4 sm:h-6 sm:w-6 text-purple-600" />
+                }
                 tooltipIcon={<Users className="h-4 w-4 text-purple-600" />}
                 tooltipTitle="Community"
                 tooltipDescription="Join thousands of 3D artists and designers."
@@ -262,7 +282,9 @@ export default function Home() {
               className="item_bubble absolute left-1/2 top-1/2 translate-x-[600px] -translate-y-[90px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Upload className="h-6 w-6 text-teal-600" />}
+                icon={
+                  <Upload className="h-4 w-4 sm:h-6 sm:w-6 text-teal-600" />
+                }
                 tooltipIcon={<Upload className="h-4 w-4 text-teal-600" />}
                 tooltipTitle="Upload Models"
                 tooltipDescription="Share your creations with our community. Upload your 3D models and reach thousands of potential buyers."
@@ -288,7 +310,9 @@ export default function Home() {
               className="item_bubble absolute left-1/2 top-1/2 -translate-x-[480px] -translate-y-[120px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Download className="h-6 w-6 text-cyan-600" />}
+                icon={
+                  <Download className="h-4 w-4 sm:h-6 sm:w-6 text-cyan-600" />
+                }
                 tooltipIcon={<Download className="h-4 w-4 text-cyan-600" />}
                 tooltipTitle="Downloads"
                 tooltipDescription="Access your purchased models anywhere, anytime."
@@ -299,10 +323,12 @@ export default function Home() {
             {/* Categories */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 translate-x-[350px] translate-y-[50px] hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 translate-x-[100px] translate-y-[60px] sm:translate-x-[180px] sm:translate-y-14 md:translate-x-[260px] md:translate-y-[45px] lg:translate-x-[350px] lg:translate-y-[50px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<LayoutGrid className="h-6 w-6 text-orange-600" />}
+                icon={
+                  <LayoutGrid className="h-4 w-4 sm:h-6 sm:w-6 text-orange-600" />
+                }
                 tooltipIcon={<LayoutGrid className="h-4 w-4 text-orange-600" />}
                 tooltipTitle="Categories"
                 tooltipDescription="Explore our organized collection by categories."
@@ -316,7 +342,9 @@ export default function Home() {
               className="item_bubble absolute left-1/2 top-1/2 -translate-x-[360px] translate-y-20 z-50"
             >
               <AnimatedIconTooltip
-                icon={<Star className="h-6 w-6 text-yellow-600" />}
+                icon={
+                  <Star className="h-4 w-4 sm:h-6 sm:w-6 text-yellow-600" />
+                }
                 tooltipIcon={<Star className="h-4 w-4 text-yellow-600" />}
                 tooltipTitle="Featured Models"
                 tooltipDescription="Discover our handpicked selection of premium 3D models and assets from top creators."
@@ -348,10 +376,12 @@ export default function Home() {
             {/* Collections */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 translate-x-[90px] translate-y-[190px] hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 translate-x-[30px] translate-y-[150px] sm:translate-x-[60px] sm:translate-y-[140px] md:translate-x-[75px] md:translate-y-[165px] lg:translate-x-[90px] lg:translate-y-[190px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Layers className="h-6 w-6 text-pink-600" />}
+                icon={
+                  <Layers className="h-4 w-4 sm:h-6 sm:w-6 text-pink-600" />
+                }
                 tooltipIcon={<Layers className="h-4 w-4 text-pink-600" />}
                 tooltipTitle="Collections"
                 tooltipDescription="Curated sets of models for specific projects and needs."
@@ -362,10 +392,10 @@ export default function Home() {
             {/* Favorites */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[650px] translate-y-[30px] hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[480px] translate-y-[25px] lg:-translate-x-[650px] lg:translate-y-[30px] hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Heart className="h-6 w-6 text-red-600" />}
+                icon={<Heart className="h-4 w-4 sm:h-6 sm:w-6 text-red-600" />}
                 tooltipIcon={<Heart className="h-4 w-4 text-red-600" />}
                 tooltipTitle="Favorites"
                 tooltipDescription="Save models you love for quick access later."
@@ -376,10 +406,12 @@ export default function Home() {
             {/* Support */}
             <div
               ref={addBubbleRef}
-              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[120px] translate-y-20 hover:z-50"
+              className="item_bubble absolute left-1/2 top-1/2 -translate-x-[100px] translate-y-16 sm:-translate-x-20 sm:translate-y-14 md:-translate-x-[100px] md:translate-y-16 lg:-translate-x-[120px] lg:translate-y-20 hover:z-50"
             >
               <AnimatedIconTooltip
-                icon={<Headphones className="h-6 w-6 text-gray-600" />}
+                icon={
+                  <Headphones className="h-4 w-4 sm:h-6 sm:w-6 text-gray-600" />
+                }
                 tooltipIcon={<Headphones className="h-4 w-4 text-gray-600" />}
                 tooltipTitle="Support"
                 tooltipDescription="Get help when you need it from our friendly support team."
